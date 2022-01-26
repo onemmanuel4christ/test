@@ -1,6 +1,7 @@
 // import './App.css';
 import styled from 'styled-components'
 import Banner from './components/Banner';
+import MeetComponent from './components/MeetComponent';
 import Navbar from './components/Navbar';
 
 const Container = styled.div`
@@ -12,6 +13,7 @@ function App() {
     <Container>
       <Navbar />
       <Banner />
+      <MeetComponent />
     </Container>
   );
 }

@@ -5,8 +5,7 @@ const NavWrap = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 176px;
-    padding-right: 153px;
+    padding: 0 150px;
     height: 86px;
 
 `
@@ -69,6 +68,7 @@ const Navbar = () => {
              <NavLinks>Meet</NavLinks>
              <NavLinks>Connect</NavLinks>
              <NavLinks>Build</NavLinks>       
+             <NavLinks>Get Funded</NavLinks>       
          </LeftSide>
          <RightSide>
             <BtnSignUp>Sign Up</BtnSignUp>
