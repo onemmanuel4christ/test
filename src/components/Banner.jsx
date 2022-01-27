@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
+import Fade from 'react-reveal/Fade';
+import { Bounce, Rotate, Slide } from 'react-reveal';
+
 
 const Container = styled.div`
     position: relative;
@@ -7,7 +10,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 0 150px;
-
+    margin-top: 97px;
 `
 const SVGDes = styled.div`
     position: absolute;
@@ -90,41 +93,41 @@ const RigtFrame = styled.div`
     width: 350px;
     height: 473px;
     border: 14px solid #7A4BEF;
-    /* margin-right: 67px; */
     margin-top: 100px;
-    z-index: 1;
 `
 const RigtImage = styled.img`
-  position: absolute;
-  top: -223px;
-  width: 583px;
-  height: 873px;
-left: -230px;
-
+    position: absolute;
+    top: -223px;
+    width: 583px;
+    height: 873px;
+    left: -230px;
   
 `
 const Banner = () => {
   return (
   <Container>
-   
-      <LeftSide>
+    <Fade Left>
+         <LeftSide>
         <SVGDes>
             <svg width="65" height="21" viewBox="0 0 65 21" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L16.4495 17.0777L26.0532 5.38483L37.5359 17.0777L50.0625 5.38483L64.0506 19.5833" stroke="#7A4BEF" stroke-width="2.65476"/>
             </svg>
         </SVGDes>
-        
-       
-
-          <TextWrap>
+        <Rotate Top>
+         <TextWrap>
             <BannetImage src="./images/next.svg" />
           </TextWrap>
         <LineWrap>
             <BannetLine src="./images/banner-line.svg" />
         </LineWrap>
+        </Rotate>
+        <Slide Right>
         <Desc>are you an entrepreneur looking for an amazing idea to be part of ?</Desc>
+        </Slide>
+        <Bounce Left>
         <Button>Get Started</Button>
-       
+        </Bounce>
+            
         <SVGDes2>
             <svg width="70" height="80" viewBox="0 0 70 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21.3106 51.8644L22.2118 13.3652L55.1025 33.3953L21.3106 51.8644Z" stroke="#7A4BEF" stroke-width="1.99107" stroke-linejoin="round"/>
@@ -138,6 +141,7 @@ const Banner = () => {
             </PlusIcon>
 
       </LeftSide>
+    </Fade>
       <LineIcon>
         <svg width="162" height="131" viewBox="0 0 162 131" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line x1="7.5" y1="46.1375" x2="153.811" y2="46.1375" stroke="#7474AE" stroke-width="15" stroke-linecap="round" stroke-dasharray="0.2 35"/>
@@ -146,18 +150,16 @@ const Banner = () => {
         <line x1="7.5" y1="123.412" x2="153.811" y2="123.412" stroke="#7474AE" stroke-width="15" stroke-linecap="round" stroke-dasharray="0.2 35"/>
         </svg>
       </LineIcon>
-    <RightSide>
+        <RightSide>
         <ElipseIcon>
             <svg width="34" height="40" viewBox="0 0 34 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="13.2738" cy="13.2738" r="12.2783" stroke="#7A4BEF" stroke-width="1.99107"/>
             <circle cx="20.5744" cy="26.5476" r="12.942" stroke="#7A4BEF" stroke-width="0.66369"/>
             </svg>
         </ElipseIcon>
-       
-        <RigtImage src="./images/banner-image.svg" alt=""/>
-        <RigtFrame>
-    </RigtFrame>
-    </RightSide>
+                <RigtImage src="./images/banner-image.svg" alt=""/>
+                <RigtFrame />
+            </RightSide>
   </Container>
   );
 };

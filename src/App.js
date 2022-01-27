@@ -10,11 +10,13 @@ const Container = styled.div`
 `
 function App() {
   return (
-    <Container>
+    <>
       <Navbar />
+    <Container>
       <Banner />
       <MeetComponent />
     </Container>
+    </>
   );
 }
 

@@ -1,12 +1,21 @@
 import React from 'react';
+import { Bounce, Fade } from 'react-reveal';
 import styled from "styled-components";
 
 const NavWrap = styled.div`
+    position: fixed;
+    top: 0;
+    width: 100%;  
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 150px;
     height: 86px;
+    margin-bottom: 20px;
+a{
+    text-decoration: none;
+}
 
 `
 const LeftSide = styled.div`
@@ -63,17 +72,29 @@ const Navbar = () => {
   return (
 
       <NavWrap>
+          <Bounce Left>
          <LeftSide>
              <Logo src="./images/logo.svg" alt="logo"/>
+             <a href="#">
              <NavLinks>Meet</NavLinks>
+             </a>
+             <a href="#">
              <NavLinks>Connect</NavLinks>
+             </a>
+             <a href="#">
              <NavLinks>Build</NavLinks>       
+             </a>
+             <a href="#">
              <NavLinks>Get Funded</NavLinks>       
+             </a>
          </LeftSide>
+          </Bounce>
+          <Fade Bottom>
          <RightSide>
             <BtnSignUp>Sign Up</BtnSignUp>
             <BtnSignIn>Sign In</BtnSignIn>
          </RightSide>
+          </Fade>
       </NavWrap>
   )
 };

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
+import Fade from 'react-reveal/Fade';
+import { Rotate, Slide, Zoom } from 'react-reveal';
 
 const Container = styled.div`
     padding: 0 150px;
-    
-
 `
 const MeetContainer = styled.div`
     display: flex;
@@ -88,6 +88,7 @@ const BuildDiv = styled.div`
 const MeetComponent = () => {
   return (
   <Container>
+    <Fade bottom>
       <MeetContainer>
       <LeftSide>
         <BackCircle src="./images/back-circle.svg" alt="" />
@@ -95,7 +96,9 @@ const MeetComponent = () => {
         <MeetImg src="./images/image-meet.svg" alt="" />
       </LeftSide>
       <RighSide>
+        <Zoom Left>
           <Title>Meet</Title>
+        </Zoom>
           <InfoParagraph>
             There’s a reason why most companies are founded by multiple co-founders and not solo founders. 
             They complement each other and have each others’ backs. 
@@ -107,9 +110,15 @@ const MeetComponent = () => {
           </InfoParagraph>
       </RighSide>
       </MeetContainer>
+      </Fade>
+
+<Fade Bottom>
      <ConnectContainer>
          <div>
-          <Title>Connect</Title>
+           <Zoom Left>
+            <Title>Connect</Title>
+           </Zoom>
+           <Fade Bottom>    
           <InfoParagraph>
                 Building a startup is not an easy feat. However, it doesn’t have to be that hard either. Enter kofoundme, 
                 the global community enabling members to discuss ideas, find co-founders, launch startups, connect with freelancers, get startup resources, and so much more.
@@ -118,24 +127,36 @@ const MeetComponent = () => {
             From advisors, investors, mentors, entrepreneurs, 
             cofoundme provides you with multiple solutions to find the perfect fit for your startup.
           </InfoParagraph>
+           </Fade>
          </div>
+         <Rotate Left>
         <div>
            <ConImg src="./images/connect-image.svg" alt=""/>
         </div>
+         </Rotate>
       </ConnectContainer>
-      <BuildContainer>
-      <BuildDiv>
-           <BuildImg src="./images/build-bg.svg" alt=""/>
-    </BuildDiv>
+</Fade>
+
+  <BuildContainer>
+  <Rotate Bottom>
+        <BuildDiv>
+            <BuildImg src="./images/build-bg.svg" alt=""/>
+      </BuildDiv>
+  </Rotate>
+
       <div>
+        <Zoom Left>
           <Title>Build</Title>
-          <InfoParagraph>
-          Curated programs and courses to help you expand your startup knowledge from zero to one.
-            </InfoParagraph>
+        </Zoom>
+          <Fade Bottom>
             <InfoParagraph>
-            From advisors, investors, mentors, entrepreneurs, kofoundme
-            provides you with multiple solutions to find the perfect fit for your startup.
-          </InfoParagraph>
+            Curated programs and courses to help you expand your startup knowledge from zero to one.
+              </InfoParagraph>
+              <InfoParagraph>
+              From advisors, investors, mentors, entrepreneurs, kofoundme
+              provides you with multiple solutions to find the perfect fit for your startup.
+            </InfoParagraph>
+          </Fade>
          </div>
       </BuildContainer>
   </Container>
