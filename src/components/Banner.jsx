@@ -97,7 +97,7 @@ const RigtFrame = styled.div`
 `
 const RigtImage = styled.img`
     position: absolute;
-    top: -223px;
+    top: -323px;
     width: 583px;
     height: 873px;
     left: -230px;
@@ -157,8 +157,11 @@ const Banner = () => {
             <circle cx="20.5744" cy="26.5476" r="12.942" stroke="#7A4BEF" stroke-width="0.66369"/>
             </svg>
         </ElipseIcon>
+        <Rotate Bottom>
+                <RigtFrame>
                 <RigtImage src="./images/banner-image.svg" alt=""/>
-                <RigtFrame />
+                </RigtFrame>
+        </Rotate>
             </RightSide>
   </Container>
   );
