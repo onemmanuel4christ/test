@@ -75,16 +75,16 @@ const Navbar = () => {
           <Bounce Left>
          <LeftSide>
              <Logo src="./images/logo.svg" alt="logo"/>
-             <a href="#">
+             <a href="/">
              <NavLinks>Meet</NavLinks>
              </a>
-             <a href="#">
+             <a href="/">
              <NavLinks>Connect</NavLinks>
              </a>
-             <a href="#">
+             <a href="/">
              <NavLinks>Build</NavLinks>       
              </a>
-             <a href="#">
+             <a href="/">
              <NavLinks>Get Funded</NavLinks>       
              </a>
          </LeftSide>
