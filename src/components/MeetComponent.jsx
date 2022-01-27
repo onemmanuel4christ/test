@@ -90,11 +90,13 @@ const MeetComponent = () => {
   <Container>
     <Fade bottom>
       <MeetContainer>
-      <LeftSide>
-        <BackCircle src="./images/back-circle.svg" alt="" />
-        <SplashImg src="./images/back-splash.svg" alt="" />
-        <MeetImg src="./images/image-meet.svg" alt="" />
-      </LeftSide>
+        <Rotate Left>
+          <LeftSide>
+            <BackCircle src="./images/back-circle.svg" alt="" />
+            <SplashImg src="./images/back-splash.svg" alt="" />
+            <MeetImg src="./images/image-meet.svg" alt="" />
+          </LeftSide>
+        </Rotate>
       <RighSide>
         <Zoom Left>
           <Title>Meet</Title>
