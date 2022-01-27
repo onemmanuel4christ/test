@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Fade from 'react-reveal/Fade';
-import { Rotate, Slide, Zoom } from 'react-reveal';
+import { Rotate, Zoom } from 'react-reveal';
 
 const Container = styled.div`
     padding: 0 150px;
